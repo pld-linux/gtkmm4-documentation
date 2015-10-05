@@ -1,27 +1,27 @@
-%define		glibmm_ver	2.40.0
-%define		gtkmm3_ver	3.12.0
+%define		glibmm_ver	2.45.40
+%define		gtkmm3_ver	3.17.50
 Summary:	Documentation and examples for gtkmm - C++ API for GTK+
 Summary(pl.UTF-8):	Dokumentacja i przykłady do gtkmm - API C++ dla GTK+
 Name:		gtkmm3-documentation
-Version:	3.12.0
+Version:	3.17.50
 Release:	1
 License:	FDL v1.2+ (documentation), GPL v2 (examples)
 Group:		Documentation
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.12/gtkmm-documentation-%{version}.tar.xz
-# Source0-md5:	fb0a65cac0b80b4b104a1dd7cb3f2172
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.17/gtkmm-documentation-%{version}.tar.xz
+# Source0-md5:	60c9a3ec4c6ec5d817a9ff8abc4d5923
 URL:		http://www.gtkmm.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	docbook-dtd45-xml
 BuildRequires:	glibmm-devel >= %{glibmm_ver}
-BuildRequires:	gnome-doc-utils >= 0.9.0
 BuildRequires:	gtkmm3-devel >= %{gtkmm3_ver}
-BuildRequires:	libstdc++-devel >= 5:3.3.1
-BuildRequires:	mm-common
+BuildRequires:	libstdc++-devel >= 6:4.6
+BuildRequires:	mm-common >= 0.9.8
 BuildRequires:	perl-base >= 1:5.6.0
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+BuildRequires:	yelp-tools
 Requires:	gtkmm3-apidocs >= %{gtkmm3_ver}
 Suggests:	glibmm-devel >= %{glibmm_ver}
 Suggests:	gtkmm3-devel >= %{gtkmm3_ver}
