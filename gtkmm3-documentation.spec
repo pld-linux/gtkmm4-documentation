@@ -1,14 +1,14 @@
-%define		glibmm_ver	2.45.40
-%define		gtkmm3_ver	3.18.0
+%define		glibmm_ver	2.48.0
+%define		gtkmm3_ver	3.20.0
 Summary:	Documentation and examples for gtkmm - C++ API for GTK+
 Summary(pl.UTF-8):	Dokumentacja i przykłady do gtkmm - API C++ dla GTK+
 Name:		gtkmm3-documentation
-Version:	3.18.0
+Version:	3.20.0
 Release:	1
 License:	FDL v1.2+ (documentation), GPL v2 (examples)
 Group:		Documentation
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.18/gtkmm-documentation-%{version}.tar.xz
-# Source0-md5:	189eca1f6f68c9605aeda34444ed7a90
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.20/gtkmm-documentation-%{version}.tar.xz
+# Source0-md5:	22139e94bb01d47c741cf33669288622
 URL:		http://www.gtkmm.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.11
