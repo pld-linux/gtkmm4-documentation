@@ -1,21 +1,21 @@
-%define		glibmm_ver	2.48.0
-%define		gtkmm3_ver	3.20.0
+%define		glibmm_ver	2.50.0
+%define		gtkmm3_ver	3.22.0
 Summary:	Documentation and examples for gtkmm - C++ API for GTK+
 Summary(pl.UTF-8):	Dokumentacja i przykłady do gtkmm - API C++ dla GTK+
 Name:		gtkmm3-documentation
-Version:	3.20.0
+Version:	3.22.0
 Release:	1
 License:	FDL v1.2+ (documentation), GPL v2 (examples)
 Group:		Documentation
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.20/gtkmm-documentation-%{version}.tar.xz
-# Source0-md5:	22139e94bb01d47c741cf33669288622
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.22/gtkmm-documentation-%{version}.tar.xz
+# Source0-md5:	5220900f6692b6546b165bf33b71078f
 URL:		http://www.gtkmm.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	docbook-dtd45-xml
 BuildRequires:	glibmm-devel >= %{glibmm_ver}
 BuildRequires:	gtkmm3-devel >= %{gtkmm3_ver}
-BuildRequires:	libstdc++-devel >= 6:4.6
+BuildRequires:	libstdc++-devel >= 6:5.1
 BuildRequires:	mm-common >= 0.9.8
 BuildRequires:	perl-base >= 1:5.6.0
 BuildRequires:	pkgconfig
@@ -43,7 +43,8 @@ gtkmm 3.x - API C++ dla GTK+ 3.x.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--disable-silent-rules
 
 %{__make}
 
