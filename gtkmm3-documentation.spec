@@ -3,12 +3,12 @@
 Summary:	Documentation and examples for gtkmm - C++ API for GTK+
 Summary(pl.UTF-8):	Dokumentacja i przykłady do gtkmm - API C++ dla GTK+
 Name:		gtkmm3-documentation
-Version:	3.24.0
+Version:	3.24.1
 Release:	1
 License:	FDL v1.2+ (documentation), GPL v2 (examples)
 Group:		Documentation
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtkmm-documentation/3.24/gtkmm-documentation-%{version}.tar.xz
-# Source0-md5:	da045a28d698c985eb3f4bc84a22507f
+Source0:	https://download.gnome.org/sources/gtkmm-documentation/3.24/gtkmm-documentation-%{version}.tar.xz
+# Source0-md5:	3550f40118f8c40e2739e63a55be77be
 URL:		http://www.gtkmm.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.11
@@ -19,12 +19,14 @@ BuildRequires:	libstdc++-devel >= 6:5.1
 BuildRequires:	mm-common >= 0.9.10
 BuildRequires:	perl-base >= 1:5.6.0
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	yelp-tools
 Requires:	gtkmm3-apidocs >= %{gtkmm3_ver}
 Suggests:	glibmm-devel >= %{glibmm_ver}
 Suggests:	gtkmm3-devel >= %{gtkmm3_ver}
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +40,10 @@ gtkmm 3.x - API C++ dla GTK+ 3.x.
 %prep
 %setup -q -n gtkmm-documentation-%{version}
 
+%{__sed} -i -e '1s,/usr/bin/env python3,%{__python3},' examples/book/buildapp/step1/install-cmd.py
+
 %build
+mm-common-prepare --copy --force
 %{__aclocal} -I build
 %{__autoconf}
 %{__autoheader}
