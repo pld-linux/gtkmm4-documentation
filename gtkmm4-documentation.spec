@@ -3,12 +3,12 @@
 Summary:	Documentation and examples for gtkmm - C++ API for GTK+
 Summary(pl.UTF-8):	Dokumentacja i przykłady do gtkmm - API C++ dla GTK+
 Name:		gtkmm4-documentation
-Version:	4.10.1
+Version:	4.12.0
 Release:	1
 License:	FDL v1.2+ (documentation), GPL v2 (examples)
 Group:		Documentation
-Source0:	https://download.gnome.org/sources/gtkmm-documentation/4.10/gtkmm-documentation-%{version}.tar.xz
-# Source0-md5:	d3bd9f5f73cbaf8a39ed790568bcc461
+Source0:	https://download.gnome.org/sources/gtkmm-documentation/4.12/gtkmm-documentation-%{version}.tar.xz
+# Source0-md5:	4e8ee765d943012a99fa1d0fe954b71b
 URL:		https://www.gtkmm.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.11
